@@ -12,7 +12,7 @@ public class LatestReading {
     @SerializedName("solar_gradiation")
     private String solarGradiation;
     @SerializedName("wind_effect")
-    private int windEffect;
+    public int windEffect;
     @SerializedName("wind_speed")
     public double windSpeed;
     @SerializedName("logged_at")

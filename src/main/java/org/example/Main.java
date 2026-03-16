@@ -15,6 +15,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException {
+
         HttpClient client = HttpClient.newBuilder().build();
 
         HttpRequest request = HttpRequest
@@ -32,9 +33,11 @@ public class Main {
         List<LatestReading> latestReadings = gson.fromJson(jObject.get("latest_readings"), ArrayList.class);
 
 
-        System.out.println(latestReading.data.turbines.get("wtg01"));
+        System.out.println(latestReading.data.turbines.get("wtg02"));
 
-
+        System.out.println(latestReading.data.turbines.get("wtg03"));
+        System.out.println(latestReading.windSpeed);
+        System.out.println(latestReading.windEffect);
 
     }
 }
